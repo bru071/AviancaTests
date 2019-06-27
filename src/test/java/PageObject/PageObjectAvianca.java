@@ -1,6 +1,11 @@
 package PageObject;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -79,4 +84,18 @@ public class PageObjectAvianca
 	}
 	
 	
+	
+	
+	
+	public void takeScreenShot(String fileWithPath) throws Exception {
+			
+		TakesScreenshot scrShot=(TakesScreenshot)driver;
+        File source = scrShot.getScreenshotAs(OutputType.FILE);
+        String name = source.getName();
+        File DestFile=new File(fileWithPath);
+        FileUtils.copyFile(source, DestFile);
+
+	
+	
+	}
 }

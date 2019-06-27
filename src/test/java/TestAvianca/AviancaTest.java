@@ -1,12 +1,6 @@
 package TestAvianca;
 
 
-import java.io.File;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,13 +21,14 @@ public class AviancaTest
 	public static void configure(){
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\634111\\git\\Avianca\\chromedriver.exe");
 		
-		 ChromeOptions ops = new ChromeOptions();
+		ChromeOptions ops = new ChromeOptions();
 		//ops.setHeadless(true);
 		ops.setAcceptInsecureCerts(true);
 		ops.addArguments("--no-sandbox");
 		ops.addArguments("--disable-gpu");
 		
 		driver = new ChromeDriver(ops);
+		//driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		selecao = new SelecaoPaisIdioma(driver);
 		
@@ -58,7 +53,6 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Brasil - R$ com idioma Espanhol
 		 */		
 		selecao.brasilEspanhol();
-		selecao.takeScreenShot();
 		//Assert.assertTrue(true, "Teste passou");
 		
 	
@@ -70,7 +64,7 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Brasil - R$ com idioma English
 		 */
 		selecao.brasilEnglish();
-		selecao.takeScreenShot();
+
 			
 	}
 	
@@ -80,7 +74,6 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Brasil - R$ com idioma Portugues
 		 */
 		selecao.brasilPortugues();
-		selecao.takeScreenShot();
 		
 		
 	}
@@ -91,7 +84,6 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Colômbia - COP com idioma Espanhol
 		 */
 		selecao.colombiaEspanhol();
-		selecao.takeScreenShot();
 		
 		
 	}
@@ -102,7 +94,6 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Colômbia - COP com idioma English
 		 */
 		selecao.colombiaEnglish();
-		selecao.takeScreenShot();
 	
 		
 	}
@@ -113,8 +104,7 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Colômbia - COP com idioma Portugues
 		 */
 		selecao.colombiaPortugues();
-		selecao.takeScreenShot();
-		
+			
 		
 	}
 	
@@ -124,7 +114,6 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Estados Unidos - USD com idioma Espanhol
 		 */
 		selecao.usaEspanhol();
-		selecao.takeScreenShot();
 		
 		
 	}
@@ -135,7 +124,6 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Estados Unidos - USD com idioma English
 		 */
 		selecao.usaEnglish();
-		selecao.takeScreenShot();
 		
 		
 	}
@@ -146,7 +134,6 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de Estados Unidos - USD com idioma Portugues
 		 */
 		selecao.usaPortugues();
-		selecao.takeScreenShot();
 		
 		
 	}
@@ -157,7 +144,6 @@ public class AviancaTest
 		 * @author Bruno de Melo Silva Teste: Validar o click no campo de selecao de OUTROS - USD com idioma Espanhol
 		 */
 		selecao.outrosEspanhol();
-		selecao.takeScreenShot();
 		
 		
 	}
@@ -169,7 +155,6 @@ public class AviancaTest
 		 */
 
 		selecao.outrosEnglish();
-		selecao.takeScreenShot();
 
 		
 	}
@@ -181,7 +166,6 @@ public class AviancaTest
 		 */
 
 		selecao.outrosPortugues();
-		selecao.takeScreenShot();
 	
 		
 	}
